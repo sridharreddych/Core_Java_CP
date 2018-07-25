@@ -1,0 +1,11 @@
+package com.concretepage.util.stream;
+
+import java.util.stream.Stream;
+
+public class GenerateDemo {
+	public static void main(String[] args) {
+		Item item = new Item("AA");
+		Stream<String> stream = Stream.generate(item::getName);
+		stream.forEach(s -> System.out.println(s));
+	}
+}

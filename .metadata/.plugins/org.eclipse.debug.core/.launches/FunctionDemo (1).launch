@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Example 4- Using Function Interface to Iterate Collection with Lambda Expression/src/com/sree/lambda/FunctionDemo.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.sree.lambda.FunctionDemo"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Example 4- Using Function Interface to Iterate Collection with Lambda Expression"/>
+</launchConfiguration>

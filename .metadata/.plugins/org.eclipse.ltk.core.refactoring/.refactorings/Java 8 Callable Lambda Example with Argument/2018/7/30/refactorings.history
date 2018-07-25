@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.concretepage.callable&apos; to &apos;com.sree.callable&apos;&#x0D;&#x0A;- Original project: &apos;Java 8 Callable Lambda Example with Argument&apos;&#x0D;&#x0A;- Original element: &apos;Java 8 Callable Lambda Example with Argument/src/com.concretepage.callable&apos;&#x0D;&#x0A;- Renamed element: &apos;Java 8 Callable Lambda Example with Argument/src/com.sree.callable&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.concretepage.callable&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.concretepage.callable" name="com.sree.callable" qualified="false" references="true" stamp="1532518504164" textual="false" version="1.0"/>
+</session>

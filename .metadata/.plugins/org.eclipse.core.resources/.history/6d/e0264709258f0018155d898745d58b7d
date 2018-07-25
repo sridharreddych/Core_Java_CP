@@ -1,0 +1,10 @@
+package com.concretepage.util.function;
+
+import java.util.function.ToLongFunction;
+
+public class ToLongFunctionExample {
+	public static void main(String[] args) {
+		ToLongFunction<Integer> ob = f1 -> f1 + 50;
+		System.out.println(ob.applyAsLong(306));
+	}
+}

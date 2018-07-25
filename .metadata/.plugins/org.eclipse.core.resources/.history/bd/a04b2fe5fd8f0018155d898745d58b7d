@@ -1,0 +1,103 @@
+package com.concretepage;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class MyApplication {
+    public static void main(String[] args) {
+    	List<MyNumber> list = new ArrayList<>();
+    	list.add(new MyNumber(100, 40));
+    	list.add(new MyNumber(300, 60));
+    	list.add(new MyNumber(60, 20));
+
+    	System.out.println("1.-----Lambda expression--------");
+    	
+    	Calculator calc1 = (n1, n2) -> n1 + n2;
+    	System.out.println(calc1.calculate(30, 50));
+    	
+    	System.out.println("---Summation---");
+    	
+    	for(MyNumber myNumber: list) {
+    		System.out.println(myNumber.process(calc1));
+    	}
+    	
+    	System.out.println("---Multiplication---");
+    	
+    	for(MyNumber myNumber: list) {
+    		System.out.println(myNumber.process((n1, n2) -> n1 * n2));
+    	}
+    	
+    	System.out.println("---Division---");
+    	
+    	for(MyNumber myNumber: list) {
+    		System.out.println(myNumber.process((n1, n2) -> n1 / n2));
+    	}    
+    	
+    	System.out.println("2.-----Method reference--------");
+    	
+    	Calculator calc2 = Utility::add;
+		System.out.println(calc2.calculate(30, 50));
+		
+		System.out.println("---Summation---");
+		
+    	for(MyNumber myNumber: list) {
+    		Calculator calc = Utility::add;
+    		System.out.println(myNumber.process(calc));
+    	}
+    	
+    	System.out.println("---Multiplication---");
+    	
+    	for(MyNumber myNumber: list) {
+    		System.out.println(myNumber.process(Utility::multiply));
+    	}     	
+    	
+    	System.out.println("3.-----Constructor reference-----");
+    	
+    	TaskHandler taskHandler = Utility::new;
+    	taskHandler.get("Task 1");
+    	
+    	System.out.println("4.-----Default methods-----");
+    	
+        Worship worship = (name) -> {
+        	System.out.println(name);
+        	System.out.println(name);
+        };
+        worship.again(worship).again(worship).chant("Ram");
+        
+        System.out.println("5.-----Generic & Default methods-----");
+
+        DataCombiner<Project> dataCombiner = (Project p) -> {
+        	if(p.getLocation() == null) {
+        		return p.getPname()+" : " + p.getTeamLead();
+        	} else {
+        		return p.getPname()+" : " + p.getTeamLead() + " : " + p.getLocation();
+        	}
+        };
+        
+        ExtraInfoProvider<Project> extraInfoProvider = (Project p) -> {
+        	p.setLocation("Noida");
+        	return p;
+        };        
+        
+        InfoProvider<Employee, Project> infoProvider = (Employee emp) -> {
+        	if(emp.getId() > 100) {
+        		return new Project("ABCD", emp.getName());
+        	} else {
+        		return new Project("PQRS", emp.getName());
+        	}
+        };
+        
+        String s = infoProvider.addMore(extraInfoProvider)
+        		.addCombiner(dataCombiner).combine(new Employee(50, "Mahesh"));
+        
+        System.out.println(s);
+        
+        System.out.println("5.-----Inheritence-----");
+        
+        DataReceiver<Employee> dataReceiver = (Employee emp) -> emp.getId() + "-" + emp.getName();
+        
+        TaskHandler tskHandler = (res) -> System.out.println(res); 
+        
+        dataReceiver.receive(tskHandler, new Employee(101, "Krishna"));
+    }
+} 

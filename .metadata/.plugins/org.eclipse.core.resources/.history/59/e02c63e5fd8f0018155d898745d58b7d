@@ -1,0 +1,29 @@
+package com.concretepage;
+
+public class Project {
+    private String pname;
+    private String teamLead;
+    private String location;
+    public Project(String pname, String teamLead) {
+	    this.pname = pname;
+	    this.teamLead = teamLead;
+    }
+	public String getPname() {
+		return pname;
+	}
+	public void setPname(String pname) {
+		this.pname = pname;
+	}
+	public String getTeamLead() {
+		return teamLead;
+	}
+	public void setTeamLead(String teamLead) {
+		this.teamLead = teamLead;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+}

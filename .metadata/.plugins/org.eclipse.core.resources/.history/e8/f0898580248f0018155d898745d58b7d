@@ -1,0 +1,9 @@
+package com.concretepage.util.function;
+
+import java.util.function.ToIntBiFunction;
+public class ToIntBiFunctionExample {
+    public static void main(String[] args) {
+        ToIntBiFunction<Integer,Integer> ob = (f1,f2) -> f1+f2;
+        System.out.println(ob.applyAsInt(102,306));
+    }    
+}

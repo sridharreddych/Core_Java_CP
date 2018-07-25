@@ -1,0 +1,12 @@
+package com.cp.time;
+
+import java.time.OffsetTime;
+
+public class OffsetTimeDemo {
+	public static void main(String[] args) {
+		OffsetTime offTime = OffsetTime.now();
+		System.out.println(offTime.getHour() + " hour");
+		System.out.println(offTime.getMinute() + " minute");
+		System.out.println(offTime.getSecond() + " second");
+	}
+}

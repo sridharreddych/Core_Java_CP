@@ -1,0 +1,14 @@
+package com.concretepage;
+
+public class InstantiateCalculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Calculator calc = (n1, n2) -> n1 + n2; 
+		
+		System.out.println(calc.calculate(30, 50)); 
+
+	}
+
+}

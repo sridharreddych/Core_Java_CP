@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.concretepage&apos; to &apos;com.sree&apos;&#x0D;&#x0A;- Original project: &apos;List to Map with Key Mapper and Value Mapper&apos;&#x0D;&#x0A;- Original element: &apos;List to Map with Key Mapper and Value Mapper/src/com.concretepage&apos;&#x0D;&#x0A;- Renamed element: &apos;List to Map with Key Mapper and Value Mapper/src/com.sree&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.concretepage&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.concretepage" name="com.sree" qualified="false" references="true" stamp="1532518677982" textual="false" version="1.0"/>
+</session>

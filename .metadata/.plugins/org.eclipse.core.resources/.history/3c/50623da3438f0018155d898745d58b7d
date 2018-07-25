@@ -1,0 +1,20 @@
+package com.concretepage.util.stream;
+
+import java.util.stream.Stream;
+
+/**
+ * @author Sridhar reddy Stream.forEach and Stream.forEachOrdered forEach()
+ *         method accepts Consumer as an argument and that consumer is applied
+ *         to each element of the stream. For example we can create a consumer
+ *         to print the stream element and use it with forEach() method.
+ *         forEachOrdered() method does the same thing but in the encounter
+ *         order of the stream.
+ */
+public class ForEachDemo {
+	public static void main(String[] args) {
+		System.out.println("forEach Demo");
+		Stream.of("BBB", "CCC", "AAA").forEach(s -> System.out.println("Output:" + s));
+		System.out.println("forEachOrdered Demo");
+		Stream.of("BBB", "CCC", "AAA").forEachOrdered(s -> System.out.println("Output:" + s));
+	}
+}

@@ -1,0 +1,4 @@
+Concat Lists
+In this example we have two lists. These lists will be converted into streams then they will be concatenated using concat() method. 
+The output stream will be converted into List using Collectors.toList(). 
+To get distinct element, we need to use Stream.distinct() . 

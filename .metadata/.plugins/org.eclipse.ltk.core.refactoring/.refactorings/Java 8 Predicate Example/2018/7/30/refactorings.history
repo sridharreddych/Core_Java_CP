@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.concretepage.function&apos; to &apos;com.sree.function&apos;&#x0D;&#x0A;- Original project: &apos;Java 8 Predicate Example&apos;&#x0D;&#x0A;- Original element: &apos;Java 8 Predicate Example/src/com.concretepage.function&apos;&#x0D;&#x0A;- Renamed element: &apos;Java 8 Predicate Example/src/com.sree.function&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.concretepage.function&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.concretepage.function" name="com.sree.function" qualified="false" references="true" stamp="1532518587704" textual="false" version="1.0"/>
+</session>

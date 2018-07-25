@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/Arrays.parallelPrefix() with Array of Primitive Data Types/src/com/sree/ParallelPrefixDemoWithPrimitiveData.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.sree.ParallelPrefixDemoWithPrimitiveData"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Arrays.parallelPrefix() with Array of Primitive Data Types"/>
+</launchConfiguration>

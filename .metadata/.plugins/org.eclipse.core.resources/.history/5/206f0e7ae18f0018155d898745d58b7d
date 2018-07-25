@@ -1,0 +1,18 @@
+package com.cp.time;
+
+import java.time.Clock;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+
+public class LocalDateTimeDemo {
+	public static void main(String[] args) {
+		LocalDateTime localdt1 = LocalDateTime.now();
+		System.out.println(localdt1);
+		LocalDateTime localdt2 = LocalDateTime.now(Clock.systemDefaultZone());
+		System.out.println(localdt2);
+		System.out.println(LocalDateTime.now(ZoneId.of("Indian/Cocos")));
+		System.out.println(LocalDateTime.now(ZoneId.of("America/Caracas")));
+		System.out.println(LocalDateTime.now(ZoneId.of("Pacific/Norfolk")));
+
+	}
+}

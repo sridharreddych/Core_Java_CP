@@ -1,0 +1,47 @@
+package com.sree.util.stream;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.BinaryOperator;
+import java.util.function.UnaryOperator;
+
+/**
+ * @author Sridhar reddy BinaryOperator java.util.function.BinaryOperator is a
+ *         functional interface that can be assigned as lambda expression.
+ *         BinaryOperator extends java.util.function.BiFunction. It accepts two
+ *         operands of the same type and process it and then returns results of
+ *         the same type as operands.
+ */
+public class BinaryOperatorDemo {
+	public static void main(String[] args) {
+		Map<String, String> map = new HashMap<>();
+		map.put("X", "A");
+		map.put("Y", "B");
+		map.put("Z", "C");
+		BinaryOperator<String> binaryOpt = (s1, s2) -> s1 + "-" + s2;
+		binaryOperatorFun(binaryOpt, map).forEach(x -> System.out.println(x));
+	}
+
+	private static List<String> binaryOperatorFun(BinaryOperator<String> binaryOpt, Map<String, String> map) {
+		List<String> biList = new ArrayList<>();
+		map.forEach((s1, s2) -> biList.add(binaryOpt.apply(s1, s2)));
+		return biList;
+	}
+}
+
+/*
+ * 
+ * public class UnaryOperatorDemo { public static void main(String[] args) {
+ * List<Integer> list = Arrays.asList(10, 20, 30, 40, 50);
+ * UnaryOperator<Integer> unaryOpt = i -> i * i; unaryOperatorFun(unaryOpt,
+ * list).forEach(x -> System.out.println(x)); }
+ * 
+ * private static List<Integer> unaryOperatorFun(UnaryOperator<Integer>
+ * unaryOpt, List<Integer> list) { List<Integer> uniList = new ArrayList<>();
+ * list.forEach(i -> uniList.add(unaryOpt.apply(i))); return uniList; } }
+ * 
+ * 
+ */

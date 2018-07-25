@@ -1,0 +1,22 @@
+Lambda expressions are one of the important features included in java 8. Lambda Expressions are used to write concise code for that interface which consist one method i.e. functional interface. Lambda Expression is also used to iterate collection in simple way. For a single method interface whatever we achieve by using anonymous class or inner class, the same can be achieved using lambda expression in a very concise code in java 8. Lambda expression defines the functional interface method and returns the instance of that interface.
+Lambda Expression Syntax
+Lambda Expression Syntax is very easy to read and understand. Lambda Expression Syntax will look like 
+    (Argument  part)  -> Body part 
+Find some example below. 
+Sample 1: If method takes no argument and printing the message. 
+() ->    System.out.println("Your message"); 
+Sample 2 : If method takes two arguments and do some business logic and returns the value. 
+(int a, int b) ->  a+b;
+The value of a+b will be returned by the method. 
+
+Sample 3: If method takes one argument and do some business logic 
+  (String s) ->  s + "Hello World"; 
+String will be returned after concatenation.
+
+ 
+Environment Setup to Run Lambda Expression Examples
+Now we will run some example to understand lambda expression. To run the example we need below software. 
+1.	JDK 8 
+2.	NetBeans or Eclipse supporting Java 8. To run the demo I am using NetBeans IDE 8.0
+Example 1: Using Runnable with Lambda Expression
+In the below example we are running a Runnable thread. Before lambda expression, to achieve runnable thread, we need to define a class which implements Runnable interface to get runnable object. Now see how to achieve using lambda expressions the same object. 

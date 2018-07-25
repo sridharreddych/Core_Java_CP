@@ -1,0 +1,6 @@
+package com.concretepage;
+
+@FunctionalInterface
+public interface TaskHandler {
+  void get(String tname);
+}

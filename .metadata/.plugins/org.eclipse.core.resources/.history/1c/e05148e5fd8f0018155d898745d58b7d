@@ -1,0 +1,12 @@
+package com.concretepage;
+
+import java.util.Objects;
+
+@FunctionalInterface
+public interface DataReceiver<T> extends DataCombiner<T> {
+	
+	default void receive(TaskHandler handler, T t) {
+		Objects.requireNonNull(handler);
+		handler.get(combine(t));
+	}
+}

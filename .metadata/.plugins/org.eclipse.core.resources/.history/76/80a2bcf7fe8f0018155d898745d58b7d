@@ -1,0 +1,23 @@
+package com.concretepage.function;
+
+import java.util.function.Function;
+
+/**
+ * @author Sridhar reddy
+ *
+ *         In the example we have created two Predicate and then creating a
+ *         student object, we are passing it to test method of Predicate.
+ */
+public class Student {
+	public int age;
+	public String gender;
+
+	public Student(int age, String gender) {
+		this.age = age;
+		this.gender = gender;
+	}
+
+	public String customShow(Function<Student, String> fun) {
+		return fun.apply(this);
+	}
+}

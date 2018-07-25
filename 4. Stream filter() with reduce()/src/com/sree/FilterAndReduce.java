@@ -1,0 +1,28 @@
+package com.sree;
+import java.util.List;
+
+
+/**
+ * @author Sridhar reddy
+ *4. Stream filter() with reduce()
+We will calculate the sum of age of users whose name are matching to a given string. 
+ */
+public class FilterAndReduce {
+	
+	public static void main(String[] args) {
+		
+		List<User> list = User.getUsers();
+		
+		list.stream().filter(u -> u.getName().endsWith("sh"))
+				.mapToInt(u -> u.getAge()).reduce((a, b) -> a + b)
+				.ifPresent(s -> System.out.println("Sum of age of users ending name with 'sh': "+ s));
+		/*
+		 * for reference
+		 * list.add(new User(1, "Dinesh", 20));
+		list.add(new User(2, "Kamal", 15));
+		list.add(new User(3, "Vijay", 25));
+		list.add(new User(4, "Ramesh", 30));
+		list.add(new User(5, "Mahesh", 18));
+		 */
+	}
+} 

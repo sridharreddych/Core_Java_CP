@@ -1,0 +1,21 @@
+package com.concretepage;
+
+import java.util.List;
+
+public class FilterFindFirstAndForEach {
+
+	public static void main(String[] args) {
+
+		List<User> list = User.getUsers();
+		System.out.println("Using findFirst() ---");
+		User user = list.stream().filter(u -> u.getName().endsWith("sh")).findFirst().orElse(null);
+		System.out.println(user.getName());
+		System.out.println("Using forEach() ---");
+		list.stream().filter(u -> u.getName().endsWith("sh")).forEach(u -> System.out.println(u.getName()));
+	}
+}
+
+/*
+ * 1. Stream filter() with findFirst(), orElse() and forEach()
+Here we will filter a list of User objects on the basis of some string and then we will find the first element in the list and if we do not get any data then we will return null.
+ */

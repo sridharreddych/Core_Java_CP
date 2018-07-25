@@ -1,0 +1,6 @@
+package com.concretepage;
+
+@FunctionalInterface
+public interface ExtraInfoProvider<R> {
+   R provideMore(R r);
+}

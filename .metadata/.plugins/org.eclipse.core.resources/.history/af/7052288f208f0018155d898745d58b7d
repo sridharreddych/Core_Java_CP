@@ -1,0 +1,11 @@
+package com.concretepage.util.function;
+import java.util.function.DoubleFunction;
+
+
+
+public class DoubleFunctionExample {
+    public static void main(String[] args) {
+        DoubleFunction<String> df = d -> String.valueOf(d*5.3); 
+        System.out.println(df.apply(43.7));
+    }    
+}

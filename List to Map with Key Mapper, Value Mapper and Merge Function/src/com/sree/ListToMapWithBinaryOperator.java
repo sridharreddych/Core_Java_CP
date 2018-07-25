@@ -1,0 +1,26 @@
+package com.sree;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+/**
+ * @author Sridhar reddy
+ *List to Map with Key Mapper, Value Mapper and Merge Function
+In this example we will pass BinaryOperator as merge function. When the toMap() method finds duplicate keys then the values are merged and it does not throw exception. Find the method syntax. 
+toMap(Function keyMapper, Function valueMapper, BinaryOperator mergeFunction)
+ */
+public class ListToMapWithBinaryOperator {
+	
+	public static void main(String[] args) {
+		
+		List<Person> list = new ArrayList<>();
+		list.add(new Person(100, "Mohan"));
+		list.add(new Person(100, "Sohan"));
+		list.add(new Person(300, "Mahesh"));
+		
+		Map<Integer, String> map = list.stream()
+				.collect(Collectors.toMap(Person::getId, Person::getName, (x, y) -> x+", "+ y));
+		map.forEach((x, y) -> System.out.println("Key: " + x +", value: "+ y));
+	}
+} 

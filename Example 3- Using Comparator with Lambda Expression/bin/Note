@@ -1,0 +1,2 @@
+Example 3: Using Comparator with Lambda Expression
+Now see Comparator interface how to use with lambda expression to sort the collection containing user defined objects. 

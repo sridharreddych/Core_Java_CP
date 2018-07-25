@@ -1,0 +1,245 @@
+package com.concretepage;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class InstantiateCalculator {
+
+	public static void main(String[] args) {
+		/*// TODO Auto-generated method stub
+		
+		Calculator calc = (n1, n2) -> n1 + n2; 
+		
+		System.out.println(calc.calculate(30, 50)); 
+  We can directly pass lambda expression as an argument or the instance of functional interface to process method in 
+ the above class. Suppose we have a list of MyNumber as following.
+	System.out.println("**************************************");
+		
+List<MyNumber> list = new ArrayList<>();
+list.add(new MyNumber(100, 40));
+list.add(new MyNumber(300, 60));
+list.add(new MyNumber(60, 20)); 
+
+
+ * We can run our functional interface in following ways. 
+Example-1:
+Here we are creating object of our functional interface and then passing it as argument for summation.
+ * 
+ 
+
+Calculator calc1 = (n1, n2) -> n1 + n2;
+for(MyNumber myNumber: list) {
+   System.out.println(myNumber.process(calc));
+} 
+
+System.out.println("**************************************");
+
+
+Example-2:
+Here we are directly passing lambda expression as an argument for multiplication.
+
+
+
+for(MyNumber myNumber: list) {
+	   System.out.println(myNumber.process((n1, n2) -> n1 * n2));
+	} 
+
+System.out.println("**************************************");
+
+
+ * Example-3:
+Here we are performing division.
+ * 
+ 
+for(MyNumber myNumber: list) {
+	   System.out.println(myNumber.process((n1, n2) -> n1 / n2));
+	} 
+System.out.println("**************************************");
+
+
+ * To create instance of functional interface using method reference we need to create a method with same method declarations 
+ * as abstract method. The method in our functional interface Calculator is as following.
+long calculate(long num1, long num2); Now we have created two static methods add and multiply 
+in our utility class with same declarations as abstract method of functional interface. Find the utility class. 
+ * Now instantiate functional interface using static method of Utility class as following.
+ 
+
+Calculator calc2 = Utility::add;
+System.out.println(calc2.calculate(30, 50)); 
+
+System.out.println("**************************************");
+
+for(MyNumber myNumber: list) {
+	   Calculator calc3 = Utility::add;
+	   System.out.println(myNumber.process(calc));
+	   //We can also pass reference method directly to the method as given below.
+	   System.out.println(myNumber.process(Utility::add)); 
+	} 
+
+System.out.println("**************************************");
+ 
+for(MyNumber myNumber: list) {
+	   System.out.println(myNumber.process(Utility::multiply));
+	} 
+
+
+ * Now let us understand how the above codes are working. To understand it, look into the definition of process method of MyNumber
+ *  class.public long process(Calculator calc) {
+   return calc.calculate(this.firstNum, this.secondNum);
+} When we call process(Utility::add) and process(Utility::multiply) then our functional interface Calculator is instantiated 
+with the definition of add and multiply method of Utility class respectively. 
+When calculate method is called with given arguments then we get results.
+ * 
+ 
+
+System.out.println("**************************************");
+
+
+ * Instantiate Functional Interface using Constructor Reference
+Here we will instantiate a functional interface using constructor reference. We need to use new keyword for constructor reference. Find the constructor reference for Utility class.
+Utility::new As we know that constructor has no return type. So we will create a functional interface with abstract method that has no return type but with same number of arguments and type as constructor. Find a functional interface. 
+TaskHandler.java
+package com.concretepage;
+
+@FunctionalInterface
+public interface TaskHandler {
+  void get(String tname);
+} We have created constructor in Utility class as given below. 
+Utility.java
+public class Utility {
+  public Utility(String taskName) {
+    System.out.println(taskName);
+  }
+  ------
+} Now let us instantiate our functional interface and run it.
+TaskHandler taskHandler = Utility::new;
+taskHandler.get("Task 1"); The output will be "Task 1".
+ * 
+ 
+
+TaskHandler taskHandler = Utility::new;
+taskHandler.get("Task 1");
+
+System.out.println("**************************************");
+
+
+ * Functional Interface with Default Methods
+We can create default methods in our functional interface. Find the functional interface Worship. 
+ * 
+ 
+Worship worship = (name) -> System.out.println(name);
+
+
+ * We have created a default method named as again. The type of parameter is Worship itself. The return type is also Worship. Now we have to define our default method. As the default method is returning Worship, we need to return a function which defines its abstract method i.e. chant. Now look into the definition of default method.
+default Worship again(Worship w) {
+  return (name) -> {
+	Objects.requireNonNull(w);  
+	chant(name);
+	w.chant(name);
+  };
+} Objects.requireNonNull checks that the specified object reference is not null. In the above code the method chant(name) is the method of caller Worship instance. w.chant(name) is of the argument Worship instance. If we call again method many times, the result will be chained. Now let us run the example.
+Worship worship = (name) -> System.out.println(name);
+
+worship.again(worship).again(worship).chant("Ram"); 
+ * 
+ 
+
+worship.again(worship).again(worship).chant("Ram");
+System.out.println("**************************************");
+
+worship.again(worship).chant("Ram"); 
+System.out.println("**************************************");
+worship.chant("Ram");
+
+System.out.println("**************************************");
+
+Worship worship1 = (name) -> {
+	   System.out.println(name);
+	   System.out.println(name);
+	}; 
+
+	worship1.again(worship1).again(worship1).chant("Ram"); 
+
+	System.out.println("**************************************");
+
+	Worship worship2 = (name) -> {
+		   System.out.println(name);
+		   System.out.println(name);
+		}; 
+
+		worship1.again(worship2).again(worship2).chant("Ram"); 
+		
+		System.out.println("**************************************");
+
+		Worship worship10 = (name) -> System.out.println(name);
+		
+		Worship1 worship11 = (name) -> {
+			   System.out.println(name);
+			   System.out.println(name);
+			}; 
+
+			worship10.again(worship10).chant("Rammmmm");
+		
+		System.out.println("**************************************");
+
+		Worship1 worship11 = (name) -> System.out.println(name);
+		
+		Worship1 worship11 = (name) -> {
+			   System.out.println(name);
+			   System.out.println(name);
+			}; 
+
+			worship11.again(worship11).chant("Rammmmm"); 
+			
+			
+			 * Now we will initialize our functional interfaces using lambda expressions.
+			 *  Initialize DataCombiner, ExtraInfoProvider, InfoProvider and run it.
+			 * (Argument  part)  -> Body part 
+			 * Now we will instantiate our functional interface Calculator as following.
+Calculator calc = (n1, n2) -> n1 + n2
+
+Now we will initialize our functional interfaces using lambda expressions. Initialize DataCombiner,
+ ExtraInfoProvider, InfoProvider and run it.
+			 
+			
+			System.out.println("**************************************");*/
+			
+			DataCombiner<Project> dataCombiner = (Project p) -> {
+				if(p.getLocation() == null) {
+					return p.getPname()+" : " + p.getTeamLead();
+				} else {
+					return p.getPname()+" : " + p.getTeamLead() + " : " + p.getLocation();
+				}
+			};
+			
+			ExtraInfoProvider<Project> extraInfoProvider = (Project p) -> {
+	        	p.setLocation("Noida");
+	        	return p;
+	        };   
+
+			InfoProvider<Employee, Project> infoProvider = (Employee emp) -> {
+				if(emp.getId() > 100) {
+					return new Project("ABCD", emp.getName());
+				} else {
+					return new Project("PQRS", emp.getName());
+				}
+			};
+
+			
+			String s = infoProvider.addMore(extraInfoProvider)
+					.addCombiner(dataCombiner).combine(new Employee(50, "Mahesh"));
+			
+			
+			System.out.println(s);
+			
+			  System.out.println("5.-----Inheritence-----");
+		        
+		        DataReceiver<Employee> dataReceiver = (Employee emp) -> emp.getId() + "-" + emp.getName();
+		        
+		        TaskHandler tskHandler = (res) -> System.out.println(res); 
+		        
+		        dataReceiver.receive(tskHandler, new Employee(101, "Krishna"));
+	
+	}
+
+}

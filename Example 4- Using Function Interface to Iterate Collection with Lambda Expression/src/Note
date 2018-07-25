@@ -1,0 +1,6 @@
+Example 4: Using Function Interface to Iterate Collection with Lambda Expression
+In java 8 there is java.util.function package introduced. With the help of java.util.function.Function API, we will iterate collection using lambda expression. In Function interface there is apply() method that will be called in user defined function. Suppose we have to create a method for custom print then we will define the method as below.
+public  String customShow(Function<Student,String> fun){
+    return fun.apply(this);
+}
+ Add the above method in Student class to run the below example. 

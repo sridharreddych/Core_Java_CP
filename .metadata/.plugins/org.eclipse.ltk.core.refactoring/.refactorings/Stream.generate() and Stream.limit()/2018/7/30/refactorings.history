@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.concretepage&apos; to &apos;com.sree&apos;&#x0D;&#x0A;- Original project: &apos;Stream.generate() and Stream.limit()&apos;&#x0D;&#x0A;- Original element: &apos;Stream.generate() and Stream.limit()/src/com.concretepage&apos;&#x0D;&#x0A;- Renamed element: &apos;Stream.generate() and Stream.limit()/src/com.sree&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.concretepage&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.concretepage" name="com.sree" qualified="false" references="true" stamp="1532519526479" textual="false" version="1.0"/>
+</session>

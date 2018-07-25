@@ -1,0 +1,19 @@
+package com.concretepage.util.stream;
+
+import java.util.List;
+
+/**
+ * @author Sridhar reddy
+ *
+ *         External Iteration Suppose we have a list of employee and we need to
+ *         update the salary of each and every employee multiplied by two. As
+ *         old fashioned, we will do as below.
+ */
+public class ExternalIterationDemo {
+	public static void main(String[] args) {
+		List<Employee> list = Employee.getEmpList();
+		for (Employee e : list) {
+			e.setSal(e.getSal() * 2);
+		}
+	}
+}

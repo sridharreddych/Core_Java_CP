@@ -1,0 +1,22 @@
+package com.sree;
+
+/**
+ * @author Sridhar reddy
+ *
+ *         Create a Location class that will implement Village interface.
+ *         Default method will automatically be available in this class.
+ */
+public class Location implements Village {
+	public int noOfPeople;
+	public String name;
+
+	@Override
+	public void setNumOfPeople(int n) {
+		this.noOfPeople = n;
+	}
+
+	@Override
+	public void setName(String name) {
+		this.name = name;
+	}
+}

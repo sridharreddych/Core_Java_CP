@@ -1,0 +1,93 @@
+package com.concretepage;
+
+import java.util.List;
+
+public class FilterMapToIntAndSum {
+
+	public static void main(String[] args) {
+
+		List<User> list = User.getUsers();
+		System.out.println("--- Sum of age between the user id 2 and 4 ---");
+		int sum = list.stream().filter(u -> u.getId() >= 2 && u.getId() <= 4).mapToInt(u -> u.getAge()).sum();
+		System.out.println("Sum: " + sum);
+		
+		/*
+		 * Home  >  Java 8
+Java 8 Stream filter() Example
+By Arvind Rai, October 03, 2016
+On this page we will provide java 8 Stream filter() example. It is an intermediate operation and can be used with reduce(), collect(), map() etc. We filter a collection for a given Predicate instance. filter() method returns a Stream instance which consists only filtered element on the basis of given Predicate. Here on this page we will provide the examples of filter() that will filter a List. It can also be used with array, map etc.
+Contents
+Stream filter()
+1. Stream filter() with findFirst(), orElse() and forEach()
+2. Stream filter() with mapToInt() and sum()
+3. Stream filter() with collect()
+4. Stream filter() with reduce()
+5. Stream filter() with List
+
+ 
+Stream filter()
+The syntax of filter() method is as follows. 
+
+filter(Predicate predicate)
+
+It returns the instance of Stream that consists the filtered data after processing Predicate. It is used as an intermediate operation. filter() can be used in many different scenarios. If we want to filter a list, array or map on the basis of any condition, we can do it easily in one line using lambda expression with stream filter() method.
+1. Stream filter() with findFirst(), orElse() and forEach()
+Here we will filter a list of User objects on the basis of some string and then we will find the first element in the list and if we do not get any data then we will return null. 
+FilterFindFirstAndForEach.java
+package com.concretepage;
+import java.util.List;
+public class FilterFindFirstAndForEach {
+	public static void main(String[] args) {
+		List<User> list = User.getUsers();
+		System.out.println("Using findFirst() ---");
+		User user = list.stream().filter(u -> u.getName().endsWith("sh"))
+				.findFirst().orElse(null);
+		System.out.println(user.getName());
+		System.out.println("Using forEach() ---");
+		list.stream().filter(u -> u.getName().endsWith("sh"))
+				.forEach(u -> System.out.println(u.getName()));
+	}
+} User.java
+package com.concretepage;
+import java.util.ArrayList;
+import java.util.List;
+public class User {
+	private int id;
+	private String name;
+	private int age;
+	public User(int id, String name, int age) {
+		this.id = id; 
+		this.name = name;
+		this.age = age;
+	}
+	public int getId() {
+		return id;
+	}
+	public String getName() {
+		return name;
+	}
+	public int getAge() {
+		return age;
+	}
+	public static List<User> getUsers() {
+		List<User> list = new ArrayList<User>();
+		list.add(new User(1, "Dinesh", 20));
+		list.add(new User(2, "Kamal", 15));
+		list.add(new User(3, "Vijay", 25));
+		list.add(new User(4, "Ramesh", 30));
+		list.add(new User(5, "Mahesh", 18));
+		return list;
+	}
+} Output
+Using findFirst() ---
+Dinesh
+Using forEach() ---
+Dinesh
+Ramesh
+Mahesh 
+
+2. Stream filter() with mapToInt() and sum()
+Here we will filter our list for a range of given user id and then we will calculate the sum of age of the users.
+		 */
+	}
+}

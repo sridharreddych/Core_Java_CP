@@ -1,0 +1,11 @@
+package com.concretepage.util.function;
+
+import java.util.function.BooleanSupplier;
+
+public class BooleanSupplierExample {
+	public static void main(String[] args) {
+		Item item = new Item(true, 123);
+		BooleanSupplier bs = item::isStatus;
+		System.out.println("Status:" + bs.getAsBoolean());
+	}
+}

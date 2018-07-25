@@ -1,0 +1,14 @@
+package com.cp.time;
+
+import java.time.DayOfWeek;
+
+public class DayOfWeekDemo {
+	public static void main(String[] args) {
+		System.out.print(DayOfWeek.MONDAY.getValue());
+		System.out.println(DayOfWeek.of(1));
+		System.out.print(DayOfWeek.THURSDAY.getValue());
+		System.out.println(DayOfWeek.of(2));
+		System.out.print(DayOfWeek.SUNDAY.getValue());
+		System.out.println(DayOfWeek.of(7));
+	}
+}

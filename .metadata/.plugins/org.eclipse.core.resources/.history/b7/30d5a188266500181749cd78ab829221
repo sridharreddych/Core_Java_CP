@@ -1,0 +1,76 @@
+package com.concretepage;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class InstantiateCalculator {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Calculator calc = (n1, n2) -> n1 + n2; 
+		
+		System.out.println(calc.calculate(30, 50)); 
+
+
+List<MyNumber> list = new ArrayList<>();
+list.add(new MyNumber(100, 40));
+list.add(new MyNumber(300, 60));
+list.add(new MyNumber(60, 20)); 
+
+Calculator calc1 = (n1, n2) -> n1 + n2;
+
+System.out.println("**************************************");
+
+for(MyNumber myNumber: list) {
+   System.out.println(myNumber.process(calc));
+} 
+
+System.out.println("**************************************");
+
+
+for(MyNumber myNumber: list) {
+	   System.out.println(myNumber.process((n1, n2) -> n1 * n2));
+	} 
+
+System.out.println("**************************************");
+
+for(MyNumber myNumber: list) {
+	   System.out.println(myNumber.process((n1, n2) -> n1 / n2));
+	} 
+System.out.println("**************************************");
+
+Calculator calc2 = Utility::add;
+System.out.println(calc2.calculate(30, 50)); 
+
+System.out.println("**************************************");
+
+for(MyNumber myNumber: list) {
+	   Calculator calc3 = Utility::add;
+	   System.out.println(myNumber.process(calc));
+	  // System.out.println(myNumber.process(Utility::add)); 
+	} 
+
+System.out.println("**************************************");
+ 
+for(MyNumber myNumber: list) {
+	   System.out.println(myNumber.process(Utility::multiply));
+	} 
+
+System.out.println("**************************************");
+
+TaskHandler taskHandler = Utility::new;
+taskHandler.get("Task 1");
+
+System.out.println("**************************************");
+
+Worship worship = (name) -> System.out.println(name);
+
+worship.again(worship).again(worship).chant("Ram");
+System.out.println("**************************************");
+
+worship.again(worship).chant("Ram"); 
+
+	}
+
+}

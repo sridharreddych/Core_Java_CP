@@ -1,0 +1,10 @@
+package com.concretepage.util.stream;
+import java.util.List;
+public class ExternalIterationDemo {
+    public static void main(String[] args) {
+        List<Employee> list = Employee.getEmpList();
+        for(Employee e : list){
+            e.setSal(e.getSal()*2);
+        }
+    }
+} 

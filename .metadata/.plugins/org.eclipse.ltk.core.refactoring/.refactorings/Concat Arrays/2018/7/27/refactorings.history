@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Book.java&apos; to &apos;ConcatSets/src/com.concretepage&apos;&#x0D;&#x0A;- Original project: &apos;Concat Arrays&apos;&#x0D;&#x0A;- Destination element: &apos;ConcatSets/src/com.concretepage&apos;&#x0D;&#x0A;- Original element: &apos;com.concretepage.Book.java&apos;" description="Copy compilation unit" destination="=ConcatSets/src&lt;com.concretepage" element1="/src&lt;com.concretepage{Book.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1530525319331" units="1" version="1.0"/>
+</session>

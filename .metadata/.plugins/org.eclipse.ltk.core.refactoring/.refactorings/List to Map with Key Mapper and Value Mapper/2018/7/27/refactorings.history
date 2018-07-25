@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Person.java&apos; to &apos;List to Map with Key Mapper, Value Mapper and Merge Function/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;List to Map with Key Mapper and Value Mapper&apos;&#x0D;&#x0A;- Destination element: &apos;List to Map with Key Mapper, Value Mapper and Merge Function/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;com.concretepage.Person.java&apos;" description="Copy compilation unit" destination="=List to Map with Key Mapper, Value Mapper and Merge Function/src&lt;" element1="/src&lt;com.concretepage{Person.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1530780796282" units="1" version="1.0"/>
+</session>

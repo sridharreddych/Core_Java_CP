@@ -1,0 +1,11 @@
+package com.concretepage;
+
+public interface Village {
+	void setNumOfPeople(int num);
+
+	void setName(String name);
+
+	default String getBusinessType() {
+		return "Most of the Village people do Farming";
+	}
+}

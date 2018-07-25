@@ -1,0 +1,15 @@
+package com.sree.util.function;
+
+import java.util.function.IntFunction;
+
+/**
+ * @author Sridhar reddy
+ *IntFunction<R>
+Accepts only integer value and produces result of given data type. 
+ */
+public class IntFunctionExample {
+	public static void main(String[] args) {
+		IntFunction ob = f -> f * f;
+		System.out.println(ob.apply(43));
+	}
+}

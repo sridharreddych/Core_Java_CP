@@ -1,0 +1,12 @@
+package com.concretepage.util.stream;
+
+import java.util.stream.Stream;
+
+public class ForEachDemo {
+	public static void main(String[] args) {
+		System.out.println("forEach Demo");
+		Stream.of("AAA", "BBB", "CCC").forEach(s -> System.out.println("Output:" + s));
+		System.out.println("forEachOrdered Demo");
+		Stream.of("AAA", "BBB", "CCC").forEachOrdered(s -> System.out.println("Output:" + s));
+	}
+}

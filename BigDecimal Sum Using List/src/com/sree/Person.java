@@ -1,0 +1,21 @@
+package com.sree;
+
+import java.math.BigDecimal;
+
+public class Person {
+	private String name;
+	private BigDecimal weight;
+
+	public Person(String name, BigDecimal weight) {
+		this.name = name;
+		this.weight = weight;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public BigDecimal getWeight() {
+		return weight;
+	}
+}

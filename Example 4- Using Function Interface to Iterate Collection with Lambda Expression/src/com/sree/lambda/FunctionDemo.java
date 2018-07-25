@@ -1,0 +1,28 @@
+package com.sree.lambda;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * @author Sridhar reddy
+ *
+ *         In java 8 there is java.util.function package introduced. With the
+ *         help of java.util.function.Function API, we will iterate collection
+ *         using lambda expression. In Function interface there is apply()
+ *         method that will be called in user defined function. Suppose we have
+ *         to create a method for custom print then we will define the method as
+ *         below. public String customShow(Function<Student,String> fun){ return
+ *         fun.apply(this); } Add the above method in Student class to run the
+ *         below example. FunctionDemo.java
+ */
+public class FunctionDemo {
+	public static void main(String[] args) {
+		List<Student> list = new ArrayList();
+		list.add(new Student("Ram", 20));
+		list.add(new Student("Shyam", 22));
+		list.add(new Student("Kabir", 18));
+		for (Student st : list) {
+			System.out.println(st.customShow(s -> s.getName() + ": " + s.getAge()));
+		}
+	}
+}
